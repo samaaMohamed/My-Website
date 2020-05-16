@@ -1,0 +1,87 @@
+.about {
+  position: relative;
+  padding: 5rem 0;
+}
+.about_content {
+  margin-top: 2rem;
+}
+.about_heading {
+  text-align: center;
+  padding-bottom: 4rem;
+  text-transform: uppercase;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  background: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about_photo {
+  width: 100%;
+  display: block;
+}
+.about_title {
+  margin-bottom: 1rem;
+  color: #223364;
+  font-size: 2rem;
+}
+.about_paragraph {
+  margin-bottom: 3rem;
+  color: #848ea8;
+  font-size: 1.2rem;
+}
+.about_cv {
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  color: white;
+  display: inline-block;
+  padding: 0.6rem;
+  text-align: center;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.about_cv:hover {
+  text-decoration: none;
+  color: white;
+}

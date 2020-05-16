@@ -1,0 +1,35 @@
+.socialMedia {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.icon {
+  margin-right: 2rem;
+}
+.socialMedia_Facebook {
+  color: #3b5998;
+}
+.socialMedia_twitter {
+  color: #1da1f2;
+}
+.socialMedia_github {
+  color: #333;
+}
+.socialMedia_linkedin {
+  color: #0077b5;
+}
+.header_icon {
+  color: white;
+  margin-bottom: 1.5rem;
+}
+.socialMedia_Facebook:hover{
+  color: #3b5998;
+}
+.socialMedia_twitter:hover {
+  color: #1da1f2;
+}
+.socialMedia_github:hover {
+  color: #333;
+}
+.socialMedia_linkedin:hover {
+  color: #0077b5;
+}
