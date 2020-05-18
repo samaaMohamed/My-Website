@@ -44,19 +44,19 @@ export default class Projects extends Component {
                         </h3>
                         <p className={styles.body}>{projectItem.body}</p>
                         <div className={styles.projects_links}>
-                          <Link to={projectItem.githubLink}>
+                          <a href={projectItem.githubLink}>
                             {projectItem.githubLink && (
                               <FontAwesomeIcon
                                 className={styles["projects-links_icon"]}
                                 icon={faGithub}
                               />
                             )}
-                          </Link>
-                          <Link to={projectItem.previewLink}>
+                          </a>
+                          <a href={projectItem.previewLink}>
                             {projectItem.previewLink && (
                               <FontAwesomeIcon icon={faGlobe} />
                             )}
-                          </Link>
+                          </a>
                         </div>
                       </div>
                     </ReactWOW>
