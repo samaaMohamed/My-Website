@@ -38,11 +38,11 @@
     #5ffbf1
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .projects_content {
   padding: 1rem;
-  height: 90%;
   border-radius: 0.5rem;
   box-shadow: 0 0 8px 1px #000;
   text-transform: capitalize;
@@ -50,9 +50,6 @@
   font-size: 1.2rem;
   transition: 0.1s ease-in-out;
   margin-bottom: 2rem;
-}
-.projects_content:hover {
-  margin-top: 0.5rem;
 }
 .projects_title {
   text-align: center;

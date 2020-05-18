@@ -4,6 +4,7 @@
 }
 .about_content {
   margin-top: 2rem;
+  text-transform: capitalize;
 }
 .about_heading {
   text-align: center;
@@ -41,6 +42,7 @@
     #5ffbf1
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .about_photo {
@@ -84,4 +86,12 @@
 .about_cv:hover {
   text-decoration: none;
   color: white;
+}
+@media (max-width: 600px) {
+  .about {
+    text-align: center;
+  }
+  .about_cv {
+    font-size: 0.9rem;
+  }
 }

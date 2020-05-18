@@ -16,6 +16,10 @@ export default class Contacts extends Component {
     errorMsg: "",
   };
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
@@ -52,7 +56,6 @@ export default class Contacts extends Component {
   };
   render() {
     let { name, email, phone, message, errorMsg } = this.state;
-    //   window.open(response.link)
     return (
       <>
         <section className={styles.contact}>
@@ -103,7 +106,7 @@ export default class Contacts extends Component {
                       value={message}
                     ></textarea>
                     <button
-                      className={styles["cotact-form_submit"]}
+                      className={styles["contact-form_submit"]}
                       type="submit"
                     >
                       Send
@@ -141,10 +144,6 @@ export default class Contacts extends Component {
             </div>
           </div>
         </section>
-        <hr />
-        <footer>
-          <p className={styles.copyright}>Copyright © Samaa Mohamed 2020</p>
-        </footer>
       </>
     );
   }

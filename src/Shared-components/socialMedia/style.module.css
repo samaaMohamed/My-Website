@@ -21,7 +21,7 @@
   color: white;
   margin-bottom: 1.5rem;
 }
-.socialMedia_Facebook:hover{
+.socialMedia_Facebook:hover {
   color: #3b5998;
 }
 .socialMedia_twitter:hover {
@@ -32,4 +32,18 @@
 }
 .socialMedia_linkedin:hover {
   color: #0077b5;
+}
+
+@media (max-width: 600px) {
+  .socialMedia {
+    font-size: 1.5rem;
+  }
+  .socialMedia li {
+    width: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .socialMedia {
+    font-size: 2rem;
+  }
 }

@@ -1,5 +1,40 @@
-@media(min-width: 600px){
-    h2{
-        font-size: 0.1rem;
-    }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  h2,
+  h3 {
+    font-size: 1.3rem !important;
+  }
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+.copyright {
+  margin-bottom: 0;
+  text-align: center;
+  color: #223364;
+  font-size: 1.3rem;
+}
+
+.horizontal-line {
+  width: 80%;
+  height: 0.1rem;
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  margin: auto;
 }

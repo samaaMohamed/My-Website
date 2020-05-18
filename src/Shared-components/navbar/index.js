@@ -2,31 +2,34 @@ import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import styles from "./style.module.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default class Navbar extends Component {
   componentDidMount() {
     window.addEventListener("scroll", () => {
+      // console.log(this.navElement);
       if (window.pageYOffset >= 50) {
-        this.navElement.classList.add(styles["navbar-scrolled"]);
+        if (this.navElement)
+          this.navElement.classList.add(styles["navbar-scrolled"]);
       } else {
-        this.navElement.classList.remove(styles["navbar-scrolled"]);
+        if (this.navElement)
+          this.navElement.classList.remove(styles["navbar-scrolled"]);
       }
     });
   }
-  scrollTOProjects = () => {
-    window.scrollTo(0, 1000);
-  };
+
   render() {
     return (
       <nav
         className={`${this.props.isInContact && styles.nav_bg}
-        ${styles.nav} navbar navbar-expand-lg fixed-top bg-transparent`}
+        ${styles.nav} navbar navbar-expand-lg fixed-top bg-transparent w-100 p-0`}
         ref={(el) => (this.navElement = el)}
       >
-        <div className="container">
-          <h1 className={`navbar-brand ${styles.logo}`}>Samaa</h1>
+        {/* <div className="container"> */}
+          <h1 className={`navbar-brand ml-5 ${styles.logo}`}>Samaa</h1>
           <button
-            className="navbar-toggler"
+            className={`navbar-toggler ${styles.toggler}`}
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -34,39 +37,38 @@ export default class Navbar extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon" />
+            <FontAwesomeIcon icon={faBars} />
           </button>
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
-                <Link to="/" className={`${styles.item} nav-link`}>
+          <div className={`collapse navbar-collapse ${styles.navigation_list}`} id="navbarSupportedContent">
+            <ul className="navbar-nav ml-auto mr-5">
+              <li className="nav-item active p-2">
+                <Link to="/" className={`${styles.item} nav-link`} onClick={() => window.scrollTo(0, 0)}>
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <a className={`${styles.item} nav-link`} href="#">
+              <li className="nav-item p-2">
+                <a className={`${styles.item} nav-link`} href="/#about-section">
                   About
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item p-2">
                 <a
                   className={`${styles.item} nav-link`}
-                  href="#"
+                  href="/#projects-section"
                   tabIndex={-1}
                   aria-disabled="true"
-                  onClick={this.scrollTOProjects}
                 >
                   Projects
                 </a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item p-2">
                 <Link className={`${styles.item} nav-link`} to="/contacts">
                   Contacts
                 </Link>
               </li>
             </ul>
           </div>
-        </div>
+        {/* </div> */}
       </nav>
     );
   }

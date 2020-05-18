@@ -6,36 +6,37 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ReactWOW from "react-wow";
 import { Link } from "react-router-dom";
+import { Facebook } from "react-content-loader";
 
 export default class Projects extends Component {
   state = {
     projects: null,
   };
   componentDidMount() {
+    this.setState({ isLoading: true });
     getProjects().then((response) => {
       this.setState({
         projects: response.data,
+        isLoading: false
       });
     });
   }
   render() {
     return (
-      <section className={styles.projects}>
+      <section id="projects-section" className={styles.projects}>
         <h2 className={styles.projects_heading}>projects</h2>
         <div className="container">
           <div className="row">
-            {this.state.projects ? (
+            {!this.state.isLoading &&
+            this.state.projects &&
+            this.state.projects.length > 0 ? (
               this.state.projects.map((projectItem, index) => {
                 return (
-                  <div
-                    className="col-lg-4 col-md-6 col-sm-12"
-                    id="projects"
-                    key={index}
-                  >
+                  <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                     <ReactWOW
                       animation="fadeInUp"
-                      duration={`${index ? index + 0.3 : 1.5}s`}
-                      delay={`${index / 2}s`}
+                      duration={`${index ? index + 0.2 : 1.5}s`}
+                      delay={`${index / 5}s`}
                     >
                       <div className={styles.projects_content}>
                         <h3 className={styles.projects_title}>
@@ -62,8 +63,14 @@ export default class Projects extends Component {
                   </div>
                 );
               })
+            ) : this.state.isLoading ? (
+              <div className="d-flex justify-content-center">
+                <Facebook title="Loading projects ..." foregroundColor="#333" backgroundColor="#223364" />
+              </div>
             ) : (
-              <p className={styles.loading}>loading..</p>
+              <div className="d-flex justify-content-center">
+                No Projects yet
+              </div>
             )}
           </div>
         </div>

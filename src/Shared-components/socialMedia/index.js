@@ -17,6 +17,7 @@ export default class SocialMedia extends Component {
             <a
               href="https://www.facebook.com/profile.php?id=100011046726336"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 className={`${styles.socialMedia_Facebook} ${styles.icon}  ${
@@ -24,23 +25,30 @@ export default class SocialMedia extends Component {
                 }`}
                 icon={faFacebookF}
               />
+              <span className="sr-only">My facebook profile</span>
             </a>
           </li>
 
           <li>
-            <a href="https://twitter.com/Sama35892367" target="_blank">
+            <a
+              href="https://twitter.com/Sama35892367"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon
                 className={`${styles.socialMedia_twitter} ${styles.icon}  ${
                   this.props.isInHeader && styles.header_icon
                 }`}
                 icon={faTwitter}
               />
+              <span className="sr-only">My twitter profile</span>
             </a>
           </li>
           <li>
             <a
               href="https://github.com/samaaMohamed?tab=repositories"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 className={`${styles.socialMedia_github} ${styles.icon}  ${
@@ -48,12 +56,14 @@ export default class SocialMedia extends Component {
                 }`}
                 icon={faGithub}
               />
+              <span className="sr-only">My github profile</span>
             </a>
           </li>
           <li>
             <a
               href="https://www.linkedin.com/in/sama-mohamed-a076a5167/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <FontAwesomeIcon
                 className={`${styles.socialMedia_linkedin} ${styles.icon}  ${

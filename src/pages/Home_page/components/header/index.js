@@ -13,7 +13,7 @@ export default class Header extends Component {
         >
           <h2 className={styles.header_title}>HI I am Samaa Mohamed</h2>
           <p className={styles.header_job}>Front End Developer</p>
-          <span><SocialMedia isInHeader={true} className="flex-column"/></span>
+          <span><SocialMedia isInHeader={true} className="flex-lg-column"/></span>
         </div>
       </div>
     );

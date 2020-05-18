@@ -6,13 +6,37 @@
   color: #fff;
 }
 .nav_bg {
- color: #223364;
+  color: #223364;
 }
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.9) !important;
   color: #223364;
 }
+.toggler {
+  color: #fff;
+  font-size: 2rem;
+}
+.navbar-scrolled .toggler {
+  color: #223364;
+}
 .item {
   font-size: 1.3rem;
-  color: inherit ;
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+  .logo {
+    margin-left: 0.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .navigation_list {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+  }
+
+  .navigation_list a {
+    color: #223364;
+  }
 }
