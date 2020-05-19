@@ -127,7 +127,7 @@ export default class Contacts extends Component {
                         <span>samaamohammed@gmail.com</span>
                       </a>
                     </div>
-                    <div className={styles["pesonal-contact_phone"]}>
+                    <div className={`${styles["pesonal-contact_phone"]} mb-4`}>
                       <FontAwesomeIcon
                         className={styles["pesonal-contact_icon"]}
                         icon={faPhoneAlt}

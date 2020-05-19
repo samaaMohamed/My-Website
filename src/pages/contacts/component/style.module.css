@@ -1,5 +1,5 @@
 .contact {
-  margin: 5rem 0;
+  margin: 5rem 0 1rem;
 }
 .contact_heading {
   text-align: center;
@@ -79,7 +79,6 @@
   margin-bottom: 2rem;
 }
 .pesonal_contact {
-  /* display: block; */
   font-size: 1.3rem;
   color: #223364;
 }
@@ -96,5 +95,10 @@
   }
   .pesonal_contact{
     font-size: 1rem;
+  }
+
+  .pesonal_contact li {
+    font-size: 1.4rem;
+    width: 2rem;
   }
 }
