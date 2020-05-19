@@ -1,6 +1,11 @@
 .contact {
   margin: 5rem 0 1rem;
 }
+@media(max-width: 600px) {
+  .contact {
+    margin: 2rem 0 1rem;
+  }
+}
 .contact_heading {
   text-align: center;
   padding-bottom: 4rem;
