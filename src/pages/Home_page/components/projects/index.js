@@ -17,7 +17,7 @@ export default class Projects extends Component {
     getProjects().then((response) => {
       this.setState({
         projects: response.data,
-        isLoading: false
+        isLoading: false,
       });
     });
   }
@@ -44,7 +44,11 @@ export default class Projects extends Component {
                         </h3>
                         <p className={styles.body}>{projectItem.body}</p>
                         <div className={styles.projects_links}>
-                          <a href={projectItem.githubLink}>
+                          <a
+                            href={projectItem.githubLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             {projectItem.githubLink && (
                               <FontAwesomeIcon
                                 className={styles["projects-links_icon"]}
@@ -52,7 +56,11 @@ export default class Projects extends Component {
                               />
                             )}
                           </a>
-                          <a href={projectItem.previewLink}>
+                          <a
+                            href={projectItem.previewLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
                             {projectItem.previewLink && (
                               <FontAwesomeIcon icon={faGlobe} />
                             )}
@@ -65,7 +73,11 @@ export default class Projects extends Component {
               })
             ) : this.state.isLoading ? (
               <div className="d-flex justify-content-center">
-                <Facebook title="Loading projects ..." foregroundColor="#333" backgroundColor="#223364" />
+                <Facebook
+                  title="Loading projects ..."
+                  foregroundColor="#333"
+                  backgroundColor="#223364"
+                />
               </div>
             ) : (
               <div className="d-flex justify-content-center">
