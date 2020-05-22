@@ -11,7 +11,7 @@ export default class Header extends Component {
         <div
           className={styles.header_container}
         >
-          <h2 className={styles.header_title}>HI I am Samaa Mohamed</h2>
+          <h2 className={styles.header_title}>Hi, I am Samaa Mohamed</h2>
           <p className={styles.header_job}>Front End Developer</p>
           <span><SocialMedia isInHeader={true} className="flex-lg-column"/></span>
         </div>
