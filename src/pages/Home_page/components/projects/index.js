@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ReactWOW from "react-wow";
-import { Link } from "react-router-dom";
 import { Facebook } from "react-content-loader";
 
 export default class Projects extends Component {
