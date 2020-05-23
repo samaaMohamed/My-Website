@@ -15,8 +15,8 @@ export default class Projects extends Component {
     this.setState({ isLoading: true });
     getProjects().then((response) => {
       this.setState({
-        // projects: response.data,
-        // isLoading: false,
+        projects: response.data,
+        isLoading: false,
       });
     });
   }
