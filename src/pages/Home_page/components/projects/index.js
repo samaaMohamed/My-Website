@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import ReactWOW from "react-wow";
-import { Facebook } from "react-content-loader";
+import Loading from "../../../../Shared-components/loading";
 
 export default class Projects extends Component {
   state = {
@@ -15,8 +15,8 @@ export default class Projects extends Component {
     this.setState({ isLoading: true });
     getProjects().then((response) => {
       this.setState({
-        projects: response.data,
-        isLoading: false,
+        // projects: response.data,
+        // isLoading: false,
       });
     });
   }
@@ -71,13 +71,8 @@ export default class Projects extends Component {
                 );
               })
             ) : this.state.isLoading ? (
-              <div className="d-flex justify-content-center">
-                <Facebook
-                  title="Loading projects ..."
-                  foregroundColor="#333"
-                  backgroundColor="#223364"
-                />
-              </div>
+                <Loading title="Loading Projects ..." />
+              
             ) : (
               <div className="d-flex justify-content-center">
                 No Projects yet
