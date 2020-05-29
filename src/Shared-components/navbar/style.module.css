@@ -2,8 +2,12 @@
   color: inherit !important;
   font-size: 2rem;
 }
+.logo:hover {
+  text-decoration: none;
+  color: inherit !important;
+}
 .logo__link {
-  color: inherit
+  color: inherit;
 }
 .nav {
   color: #fff;
@@ -12,7 +16,7 @@
   color: #223364;
 }
 .nav_bg .toggler {
-  color: #223364
+  color: #223364;
 }
 
 .navbar-scrolled {
