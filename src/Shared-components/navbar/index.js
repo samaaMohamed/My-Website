@@ -73,7 +73,7 @@ export default class Navbar extends Component {
             </li>
             <li className="nav-item p-2">
               <Link className={`${styles.item} nav-link`} to="/contacts">
-                Contacts
+                Contact
               </Link>
             </li>
           </ul>

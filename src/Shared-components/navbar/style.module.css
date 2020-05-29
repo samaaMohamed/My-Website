@@ -21,9 +21,12 @@
 }
 
 .navbar-scrolled {
-  background-color: rgba(255, 255, 255, 0.9) !important;
+  background-color: rgba(255, 255, 255, 1) !important;
   color: #223364;
+  box-shadow: 0px 0px 9px #333;
+  transition: all 0.5s;
 }
+
 .toggler {
   color: #fff;
   font-size: 1.5rem;
@@ -37,9 +40,6 @@
 }
 
 @media (max-width: 600px) {
-  .nav {
-    border-bottom: 1px solid #ddd;
-  }
   .logo {
     margin-left: 0.5rem;
     margin-bottom: 0;

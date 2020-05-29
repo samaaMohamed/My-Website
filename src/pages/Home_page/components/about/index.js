@@ -20,13 +20,13 @@ export default class About extends Component {
               <div className={styles.about_content}>
                 <h3 className={styles.about_title}>Who am I</h3>
                 <p className={styles.about_paragraph}>
-                  I'm samaa mohamed,I live in cairo,I Study Computer and System
-                  Engineering at AZhar University,I work as Front End Developer,
+                  I'm samaa mohamed, I live in cairo, I Study Computer and System
+                  Engineering at Al-Azhar University, I work as a Front End Developer,
                   I built some projects This CV will view it and my journey in
                   web development.
                 </p>
                 <a href="./cv.pdf" className={styles.about_cv} download>
-                  dawonload cv
+                  download cv
                 </a>
               </div>
             </div>
