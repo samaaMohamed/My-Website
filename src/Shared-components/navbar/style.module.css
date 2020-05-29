@@ -1,8 +1,9 @@
 .logo {
   color: inherit !important;
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: 'Damion', cursive;
 }
-.logo:hover {
+.logo :hover {
   text-decoration: none;
   color: inherit !important;
 }
