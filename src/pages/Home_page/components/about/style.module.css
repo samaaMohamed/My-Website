@@ -44,6 +44,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 .about_photo {
   width: 100%;
