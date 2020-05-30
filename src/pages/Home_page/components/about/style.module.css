@@ -44,6 +44,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 .about_photo {
   width: 100%;
@@ -82,7 +83,7 @@
   border-radius: 1rem;
   text-transform: uppercase;
   font-size: 1.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 .about_cv:hover {
   text-decoration: none;

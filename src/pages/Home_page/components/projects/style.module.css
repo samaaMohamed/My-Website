@@ -1,10 +1,10 @@
 .projects {
   padding: 5rem 0;
 }
-@media (max-width: 600px) {
+@media(max-width: 600px) {
   .projects {
     padding: 1rem 0;
-  }
+  } 
 }
 .projects_heading {
   text-align: center;
