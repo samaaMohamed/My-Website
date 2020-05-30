@@ -1,8 +1,12 @@
 body {
   margin: 0;
-  font-family: "Open Sans Condensed", sans-serif!important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans Condensed", sans-serif !important;
+}
+
+p {
+  font-size: 1.4rem !important;
+  line-height: 1.7;
+  letter-spacing: 1;
 }
 
 code {
