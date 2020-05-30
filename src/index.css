@@ -3,6 +3,12 @@ body {
   font-family: "Open Sans Condensed", sans-serif !important;
 }
 
+h2,
+h3,
+h4 {
+  font-weight: bold !important;
+}
+
 p {
   font-size: 1.4rem !important;
   line-height: 1.7;
