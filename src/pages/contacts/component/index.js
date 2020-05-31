@@ -92,7 +92,7 @@ export default class Contacts extends Component {
                     <input
                       className={styles["contact-form_control"]}
                       name="phone"
-                      type="number"
+                      type="tel"
                       placeholder="Phone"
                       onChange={this.handleChange}
                       value={phone}
