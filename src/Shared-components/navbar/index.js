@@ -18,6 +18,10 @@ export default class Navbar extends Component {
     });
   }
 
+  closeNavbarOnClickingNavItem = () => {
+    this.togglerBtn.click();
+  };
+
   render() {
     return (
       <nav
@@ -29,7 +33,9 @@ export default class Navbar extends Component {
       >
         {/* <div className="container"> */}
         <h1 className={`navbar-brand ml-2 ml-md-5 ${styles.logo}`}>
-          <Link to="/" className={styles.logo__link}>Samaa</Link>
+          <Link to="/" className={styles.logo__link}>
+            Samaa
+          </Link>
         </h1>
         <button
           className={`navbar-toggler ${styles.toggler}`}
@@ -39,6 +45,7 @@ export default class Navbar extends Component {
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          ref={(el) => (this.togglerBtn = el)}
         >
           <FontAwesomeIcon icon={faBars} />
         </button>
@@ -47,7 +54,7 @@ export default class Navbar extends Component {
           id="navbarSupportedContent"
         >
           <ul className="navbar-nav ml-auto mr-5">
-            <li className="nav-item active p-2">
+            <li className="nav-item active p-2" onClick={this.closeNavbarOnClickingNavItem}>
               <Link
                 to="/"
                 className={`${styles.item} nav-link`}
@@ -56,12 +63,12 @@ export default class Navbar extends Component {
                 Home
               </Link>
             </li>
-            <li className="nav-item p-2">
+            <li className="nav-item p-2" onClick={this.closeNavbarOnClickingNavItem}>
               <a className={`${styles.item} nav-link`} href="/#about-section">
                 About
               </a>
             </li>
-            <li className="nav-item p-2">
+            <li className="nav-item p-2" onClick={this.closeNavbarOnClickingNavItem}>
               <a
                 className={`${styles.item} nav-link`}
                 href="/#projects-section"
@@ -71,7 +78,7 @@ export default class Navbar extends Component {
                 Projects
               </a>
             </li>
-            <li className="nav-item p-2">
+            <li className="nav-item p-2" onClick={this.closeNavbarOnClickingNavItem}>
               <Link className={`${styles.item} nav-link`} to="/contacts">
                 Contact
               </Link>

@@ -5,6 +5,12 @@ import ReactWOW from "react-wow";
 import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import SocialMedia from "../../../Shared-components/socialMedia";
 import { sendMessage } from "../services/contact.service";
+import {
+  isValidText,
+  isEmailValid,
+  isContainingNumbers,
+  isPhoneValid,
+} from "../services/validation.service";
 
 export default class Contacts extends Component {
   state = {
@@ -38,7 +44,17 @@ export default class Contacts extends Component {
       message.length === 0
     ) {
       this.setState({ errorMsg: "Please fill all the fields !" });
+    } else if (!isValidText(name) || isContainingNumbers(name)) {
+      this.setState({
+        errorMsg:
+          "Please type your name correctly without any symbols or numbers !",
+      });
+    } else if (!isEmailValid(email)) {
+      this.setState({ errorMsg: "Please type a valid email !" });
+    } else if (!isPhoneValid(phone)) {
+      this.setState({ errorMsg: "Please type a valid phone number !" });
     } else {
+      this.setState({ errorMsg: "" });
       sendMessage({ name, email, phone, message })
         .then((response) => {
           alert("Your message has been sent successfully");
@@ -72,6 +88,7 @@ export default class Contacts extends Component {
                   <form
                     onSubmit={this.handleSubmit}
                     className={styles.contact_form}
+                    noValidate
                   >
                     <input
                       className={styles["contact-form_control"]}
